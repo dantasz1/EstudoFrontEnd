@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#8 Colocando em prática - front-end</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <section class="cadastroLoja">
+        <form id="form" method="post" action="http://api.flit.com.br/submeterDados">
+            <fieldset id="campos">
+                <div class="informacao">
+                    <label for="nome">Nome :</label>
+                    <input type="text" id="nome">
+                </div>
+                <div class="informacao">
+                    <label for="endereco">Endereço : </label>
+                    <input type="text" name="endereco" id="endereco">
+                </div>
+                <div class="informacao">
+                    <label for="diasDaSemana">Dias da semana que esta aberto :</label>
+                    <select name="diasDaSemana" id="diasDaSemana">
+                        <option value="segunda">segunda</option>
+                        <option value="terça">terça</option>
+                        <option value="quarta">quarta</option>
+                        <option value="quinta">quinta</option>
+                        <option value="sexta">sexta</option>
+                        <option value="sabado">sabado</option>
+                        <option value="domingo">domingo</option>
+                    </select>
+                </div>
+                <div class="horarios">
+                    <label>Horario de Abertura : </label>
+                    <input type="time" name="abertura" id="abertura">
+                </div>
+                <div class="horarios">
+                    <label>Horario de fechamento : </label>
+                    <input type="time" name="fechamento" id="fechamento">
+                </div>
+                <input type="submit" value="enviar">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <script src="js.js">
+    </script>
+
+</body>
+
+</html>

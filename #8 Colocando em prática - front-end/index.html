@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./consulta.css">
+    <title>Consulta de Produtos</title>
+
+</head>
+
+<body>
+    <div class="box">
+        <h1>Consulta de Produtos de Supermercado</h1>
+
+        <label for="searchInput">Buscar Produto:</label>
+        <input type="text" id="searchInput" placeholder="Digite o nome do produto" >
+        <button  onclick="searchProducts()" id="buscar">Buscar </button >
+        
+    </div>
+    <div id="resultContainer"></div>
+
+    <script>
+      
+        // Dados de exemplo (pode ser substituído por uma chamada a uma API)
+        const products = [
+            { id: 1, name: 'Arroz - Supermercado da Ilha - Miracatu', price: 5.99 },
+            { id: 1, name: 'Arroz - Mercearia do Poá - Rocio', price: 5.69 },
+            { id: 1, name: 'Arroz - Mercearia Dantas - Iguape ', price: 5.49 },
+            { id: 2, name: 'Feijão - Supermercado da Ilha - Micaratu', price: 3.49 },
+            { id: 2, name: 'Feijão - Supermercado Nova Vida - Iguape', price: 3.79 },
+            { id: 2, name: 'Feijão - Mercearia do Real - Iguape', price: 4.09 },
+            { id: 3, name: 'Macarrão - Supermercado Monte Carlo- Ilha Comprida', price: 2.99 },
+            { id: 3, name: 'Macarrão - Supermercado da Ilha - Micaratu', price: 3.19 },
+            { id: 3, name: 'Macarrão - Supermercado Nova Vida - Iguape', price: 2.29 },
+            { id: 3, name: 'Óleo - Supermercado Lara - Rocio', price: 4.99 },
+            { id: 3, name: 'Óleo - Supermercado Franco - Rocio', price: 5.19 },
+            { id: 3, name: 'Óleo - Supermercado Kamila - Rocio', price: 4.99 },
+            { id: 3, name: 'Açucar - Supermercado Lara - Rocio', price: 3.39 },
+            { id: 3, name: 'Açucar - Supermercado Dia - Iguape', price: 3.60 },
+            { id: 3, name: 'Açucar - Supermercado Magmaxx - Iguape', price: 3.39 },
+            { id: 3, name: 'Sal - Supermercado Lara - Rocio', price: 2.29 },
+            { id: 3, name: ' - Supermercado Lara - Rocio', price: 3.39 },
+            // Adicione mais produtos conforme necessário
+        ];
+        document.addEventListener('keypress', function (e) {
+    if (e.key === "Enter") 
+
+    var btn = document.querySelector("#buscar")
+            btn.click();
+        })
+        function searchProducts() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerHTML = '';
+
+            const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchInput));
+
+            if (filteredProducts.length > 0) {
+                filteredProducts.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.classList.add('product');
+                    productDiv.innerHTML = `<strong>${product.name}</strong> - R$ ${product.price.toFixed(2)}`;
+                    resultContainer.appendChild(productDiv);
+                });
+            } else {
+                resultContainer.innerHTML = 'Nenhum produto encontrado.';
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>
