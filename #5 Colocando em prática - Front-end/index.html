@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#5 Colocando em prática - Front-end</title>
+</head>
+
+<body>
+     <div class="titulo">
+        <h1>
+            Formulario de cadastro de carros
+        </h1>
+     </div>
+    <form>
+        <title>Formulario de cadastro de carros</title>
+        <div class="Modelo">
+            <label for="Modelo">Modelo</label>
+            <input type="text" name=" Modelo" placeholder="insira o modelo aqui">
+        </div>
+        <div>
+            <label for="Marca">Marca</label>
+            <input type="text" name="Marca" placeholder="insira a marca aqui">
+        </div>
+        <div>
+            <label for="ano">Ano</label>
+            <input type="text" name="ano" placeholder="insira o ano aqui">
+        </div>
+        <div><label for="quilometragem">Quilimetragem</label>
+            <input type="text" name="quilometragem" placeholder="insira a quilometragem aqui">
+        </div>
+        <div>
+            <label for="valor">Valor</label>
+            <input type="text" name="valor" placeholder="insira o valor aqui">
+        </div>
+        <div class="UsadoOuNovo">
+            <label for="UsadoOuNovo">Carro usado</label>
+            <input type="radio" name="UsadoOuNovo" >
+            <label for="UsadoOuNovo">Carro Novo</label>
+            <input type="radio" name="UsadoOuNovo">
+        </div>
+        <div class="Adicionais">
+
+            <label for="adicionais">Adicionais :</label><br>
+            <label for="airbag">AirBag</label>
+            <input type="checkbox" name="adicionais" value="AirBag" id="airBag">
+            <br>
+
+            <label for="alarme">Alarme</label>
+            <input type="checkbox" name="adicionais" value="Alarme" id="alarme">
+            <br>
+            <label for="Ar">Ar condicionado</label>
+            <input type="checkbox" value="arCondicionado" id="ar">
+            <br>
+
+        </div>
+        <div class="FinalDaPlaca"></div>
+        <label for="FinalDaPlaca">Final da Placa : </label>
+        <select name="FinalDaPlaca" id="finaldaplaca">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+<div class="submit">
+
+<input type="submit" value="enviar">
+
+        </div>
+
+    </form>
+
+</body>
+
+</html>
